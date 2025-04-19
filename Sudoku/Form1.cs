@@ -6,5 +6,14 @@ namespace Sudoku
         {
             InitializeComponent();
         }
+
+        private void StartGame(object sender, EventArgs e)
+        {
+            this.Hide();
+            SudokuForm game = new SudokuForm();
+            game.FormClosed += (s, args) => this.Show();
+            game.Show();
+        }
     }
 }
+
